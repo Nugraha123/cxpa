@@ -1,0 +1,95 @@
+/* Warna bernuansa alam */
+:root {
+  --green-dark: #14532d;
+  --green-light: #a3e635;
+  --text-light: #f9fafb;
+  --nature-orange: #ed6a26;
+}
+
+.navbar {
+  color: var(--text-light);
+  height: 60px;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+.navbar.transparent {
+  background-color: rgba(0, 0, 0, 0.3); /* semi-transparan di atas foto */
+  color: white;
+}
+
+.nav-container {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo */
+.nav-logo img {
+  margin-top: 10px;
+  height: 70px; /* bisa diubah sesuai kebutuhan */
+  width: auto;
+  object-fit: contain;
+}
+
+/* Menu Desktop */
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-menu li a {
+  color: var(--text-light);
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s;
+}
+
+.nav-menu li a:hover {
+  color: var(--green-light);
+}
+
+/* Tombol Mobile */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: var(--text-light);
+  margin: 4px 0;
+  transition: 0.3s;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  .nav-menu {
+    position: absolute;
+    top: 60px;
+    left: -100%;
+    flex-direction: column;
+    background-color: var(--green-dark);
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    padding: 1rem 0;
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+}

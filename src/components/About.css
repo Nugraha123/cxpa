@@ -1,0 +1,74 @@
+.about-section {
+  background-color: #f5f5f5;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.about-header {
+  max-width: 800px;
+  margin: 0 auto 50px;
+}
+
+.about-logo {
+  width: 120px;
+  margin-bottom: 15px;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+.about-section h2 {
+  font-size: 2.2rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.about-section p {
+  color: #555;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Card Container */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.activity-card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.activity-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+.activity-card h3 {
+  color: #e67e22; /* warna oranye dari tema CXPA */
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+}
+
+.activity-card p {
+  color: #444;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Animasi logo */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
